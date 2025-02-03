@@ -10,7 +10,6 @@ This repository contains code for segmenting FLAIR abnormalities in lower-grade 
 - [Dataset](#dataset)
 - [Model Architecture](#model-architecture)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Model Evaluation](#model-evaluation)
 - [License](#license)
 
@@ -68,52 +67,9 @@ Loss function and metrics include:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/Radiogenomic-LGG-Segmentation.git
+   git clone https://github.com/shahabaalam/Radiogenomic-LGG-Segmentation.git
    cd Radiogenomic-LGG-Segmentation
    ```
-
-2. **Create a virtual environment (optional but recommended):**
-
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install required packages:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-   _A sample `requirements.txt` might include packages like `tensorflow`, `keras`, `numpy`, `pandas`, `opencv-python`, `scikit-image`, `scikit-learn`, and `matplotlib`._
-
----
-
-## Usage
-
-### **Data Preparation**
-
-- Ensure the LGG Segmentation dataset is organized as expected. The code expects a folder structure where each patient folder contains the MRI images and corresponding mask files (mask files include `_mask` in their filename).
-
-### **Training the Model**
-
-- Run the training script:
-  ```bash
-  python train.py
-  ```
-  This script:
-  - Creates data generators for training, validation, and testing.
-  - Compiles and trains the U-Net model.
-  - Saves the best model based on validation performance.
-
-### **Evaluation & Prediction**
-
-- After training, evaluate the model on the test set:
-  ```bash
-  python evaluate.py
-  ```
-- To perform predictions and visualize the results:
-  ```bash
-  python predict.py
-  ```
 
 ---
 
